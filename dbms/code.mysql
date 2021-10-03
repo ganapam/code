@@ -1,0 +1,16 @@
+create table employee(eid int, first_name varchar(30), last_name varchar(30), salary int, dept_no int);
+insert into employee(eid,first_name,last_name,salary,dept_no) values(1,'S','smith',10000,10);
+insert into employee(eid,first_name,last_name,salary,dept_no) values(2,'P','jhon',20000,20);
+insert into employee(eid,first_name,last_name,salary,dept_no) values(3,'A','ravi',30000,30);
+insert into employee(eid,first_name,last_name,salary,dept_no) values(4,'B','jack',40000,21);
+insert into employee(eid,first_name,last_name,salary,dept_no) values(5,'D','jack',60000,21);
+
+select * from employee where last_name='smith';
+ALTER table employee add phonenumer int;
+select * from employee;
+SELECT DISTINCT last_name,dept_no FROM employee;
+select last_name,salary from employee where dept_no=10;
+update employee  set salary=25000 where last_name="jhon";
+select * from employee;
+delete from employee where dept_no=30;
+select * from employee;
