@@ -1,0 +1,4 @@
+a=10#one value stores in a variable
+b=20#second variable
+c=a+b#adding values to c variable
+print(c)
