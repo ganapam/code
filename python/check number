@@ -1,0 +1,12 @@
+a=int(input(""))
+if a==1:
+  print("positive")
+elif a==-1:
+  print("Negitive")
+elif a==0:
+  print("equal to 0")
+else:
+  print("invalid")
+  output:-
+  0
+equal to 0
