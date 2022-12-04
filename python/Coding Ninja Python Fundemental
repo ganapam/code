@@ -34,3 +34,145 @@ if(1 <= a <= 10 and 1 <= b <= 10 and 1 <= c <= 10 and 1 <= d <= 10):
     d = a1*b1
     print(d)
 
+
+''' Given an integer n, find if n is positive, negative or 0.
+If n is positive, print "Positive"
+If n is negative, print "Negative"
+And if n is equal to 0, print "Zero".'''
+
+n = int(input(''))
+if(n > 0):
+  print("Positive")
+elif(n < 0):
+  print("Negative")
+elif(n == 0):
+    print("Zero")
+    
+   
+   
+
+# Given an integer n, find and print the sum of numbers from 1 to n.
+n = int(input(''))
+print(n*(n+1)//2)
+
+# Given a number N, print sum of all even numbers from 1 to N.
+
+n = int(input(''))
+count = 0
+for i in range(0, n+1):
+  if i % 2 == 0:
+    count = count+i
+print(count)
+
+
+#Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E) and Step Size (W), you need to convert all Fahrenheit values from Start to End at the gap of W, into their corresponding Celsius values and print the table.
+
+s = int(input())
+e = int(input())
+w = int(input())
+while True:
+    c = 0
+    if s <= e:
+        c = (s-32)*5/9
+        print(s, int(c))
+        s = s + w
+
+    else:
+        break
+
+# Write a program that performs the tasks of a simple calculator. The program should first take an integer as input and then based on that integer perform the task as given below.
+o=int(input(''))
+while 0!=6:
+   if o<=5 and 0>=1:
+      a=int(input(''))
+      b=int(input(''))
+   if o==1:
+      print(a+b)
+   if o==2:
+       print(a-b)
+   if o==3:
+       print(a*b)
+   if o==4:
+       print(a//b)
+   if o==5:
+       print(a % b)
+   elif o< 1 or o > 6:
+       print('Invalid Operation')
+   o=int(input(''))
+   
+   
+   # Write a program to generate the reverse of a given number N. Print the corresponding reverse number.
+   rev_num = 0
+base_pos = 1
+
+
+def reversDigits(num):
+    global rev_num
+    global base_pos
+    if(num > 0):
+        reversDigits((int)(num / 10))
+        rev_num += (num % 10) * base_pos
+        base_pos *= 10
+    return rev_num
+
+
+num = int(input(''))
+print(reversDigits(num))
+
+
+# Write a program to determine if given number is palindrome or not. Print true if it is palindrome, false otherwise.
+def reverseDigits(num) :
+ 
+    rev_num = 0;
+    while (num > 0) :
+        rev_num = rev_num * 10 + num % 10
+        num = num // 10
+     
+    return rev_num
+ 
+# Function to check if n is Palindrome
+def isPalindrome(n) :
+ 
+    # get the reverse of n
+    rev_n = reverseDigits(n);
+ 
+    # Check if rev_n and n are same or not.
+    if (rev_n == n) :
+        return 1
+    else :
+        return 0
+ 
+# Driver Code
+if __name__ == "__main__" :
+ 
+    n =int(input(''))
+     
+    if isPalindrome(n) == 1 :
+        print('true')
+         
+    else :
+        print('false')
+        
+ # Write a program to input an integer N and print the sum of all its even digits and sum of all its odd digits separately.
+ 
+ num=input()
+x=[int(i) for i in num]
+e=0
+o=0
+for i in range(0,len(x)):
+    if x[i]%2==0:
+        e=e+x[i]
+    else:
+        o=o+x[i]
+print(e,o)
+
+# Nth term of Fibonacci series F(n), where F(n) is a function, is calculated using the following formula -
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+if __name__ == "__main__":
+    n = int(input(''))
+    print(fibonacci(n))
+    
